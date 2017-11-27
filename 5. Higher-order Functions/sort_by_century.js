@@ -1,4 +1,7 @@
+//logs the average age per century for entries in the ancestry file
+
 var centuries = {};
+const ancestry = require(ancestry.js);
 
 function average(array) {
   function plus(a, b) { return a + b; }

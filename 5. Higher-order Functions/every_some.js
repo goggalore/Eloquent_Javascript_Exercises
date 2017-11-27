@@ -1,3 +1,5 @@
+// implementation of the every and some methods on arrays
+
 function every(array, func) {
    for(var i = 0; i < array.length; i++){
      if(!func(array[i])) {
