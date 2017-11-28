@@ -1,3 +1,4 @@
+// checks if given number is even by the rule that number's evenness is the same as number - 2
 function isEven(number) {
   number = Math.abs(number);
   

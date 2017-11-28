@@ -1,8 +1,9 @@
 // finds min of two numbers
-
 function min(a, b) {
+  if (isNaN(a) || isNaN(b)) throw Error('a and b must both be numbers');
+
   if (a < b) {
-    return a 
+    return a; 
   }
   
   return b; 
