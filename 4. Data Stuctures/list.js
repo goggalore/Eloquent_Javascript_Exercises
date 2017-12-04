@@ -28,7 +28,7 @@ function listToArray(list, array) {
 function listToArrayNR(list) {
   var array = [];
   
-  for(node = list; node; node = node.rest) {
+  for (node = list; node; node = node.rest) {
     array.push(node.value);
   }
   
@@ -43,7 +43,7 @@ function prepend(element, list) {
 }
 
 function nth(list, position) {
-  if(position === 0) {
+  if (position === 0) {
     return list.value;
   }
   

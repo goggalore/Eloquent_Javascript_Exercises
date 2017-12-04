@@ -3,7 +3,7 @@ function reverseArray(array) {
   var reversed = [];
   const LENGTH = array.length;
   
-  for(var i = 0; i < LENGTH; i++){
+  for (var i = 0; i < LENGTH; i++){
     reversed.push(array.pop());
   }
   
@@ -14,7 +14,7 @@ function reverseArray(array) {
 function reverseArrayInPlace(array) {
   var temp;
   
-  for(var i = 0; i < Math.floor(array.length/2); i++) {
+  for (var i = 0; i < Math.floor(array.length/2); i++) {
     temp = array[i];
     array[i] = array[array.length - i - 1];
     array[array.length - i - 1] = temp;

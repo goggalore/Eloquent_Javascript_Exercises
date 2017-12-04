@@ -1,8 +1,8 @@
 // implementation of the every and some methods on arrays
 
 function every(array, func) {
-   for(var i = 0; i < array.length; i++){
-     if(!func(array[i])) {
+   for (var i = 0; i < array.length; i++){
+     if (!func(array[i])) {
        return false;
      }
    }
@@ -12,7 +12,7 @@ function every(array, func) {
 
 function some(array, func) {
   for(var i = 0; i < array.length; i++){
-    if(func(array[i])){
+    if (func(array[i])){
       return true;
     }
   }

@@ -4,20 +4,20 @@
 function fizzbuzz(start, end) {
   var temp = 0;
   
-  if(start > end) {
+  if (start > end) {
     temp = start;
     start = end;
     end = temp;
   }
   
-  for(start; start <= end; start++) {
-    if(start % 3 === 0 && start % 5 === 0) {
+  for (start; start <= end; start++) {
+    if (start % 3 === 0 && start % 5 === 0) {
       console.log('fizzbuzz')
     }
-    else if(start % 3 === 0) {
+    else if (start % 3 === 0) {
       console.log('fizz');
     }
-    else if(start % 5 === 0) {
+    else if (start % 5 === 0) {
       console.log('buzz');
     }
     else {

@@ -1,7 +1,7 @@
 function incrementDown(start, end, increment) { 
   var array = [];
   
-  for(start; start >= end; start += increment) {
+  for (start; start >= end; start += increment) {
     array.push(start);
   }
   
@@ -46,7 +46,7 @@ function sum(array) {
 function simpleSum(array) {
   var current = 0;
 
-  for(var i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     current += array[i];
   }
 

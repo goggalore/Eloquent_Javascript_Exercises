@@ -3,7 +3,7 @@ function countBs(string) {
   var counter = 0;
   
   string = string.split('');
-  for(var i = 0; i < string.length; i++){
+  for (var i = 0; i < string.length; i++){
     if (string[i] === letter) {
       counter++;
     }
@@ -18,7 +18,7 @@ function countChar(string, letter) {
   
   string = string.split('');
   
-  for(var i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     if (string[i] === letter) {
       counter++;
     }
@@ -35,10 +35,10 @@ function insensitiveCountChars(string, chars) {
   string = string.toLowerCase().split('');
   chars = chars.toLowerCase().split('');
 
-  for(var i = 0; i < string.length; i++){
+  for (var i = 0; i < string.length; i++){
     substring = string.slice(i, i + chars.length);
 
-    if(arraysEqual(substring, chars)) {
+    if (arraysEqual(substring, chars)) {
       counter++
     } 
   }
@@ -52,8 +52,8 @@ function arraysEqual(a, b) {
   if (a.length !== b.length) return false;
 
   
-  for(var i = 0; i < a.length; i++) {
-    if(a[i] !== b[i]){
+  for (var i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]){
       return false
     }
   }

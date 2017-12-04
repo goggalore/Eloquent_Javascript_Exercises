@@ -12,7 +12,7 @@ function sortAgesToCentury() {
   var person = {};
   var yearOfDeath = 0;
   
-  for(var i = 0; i < ancestry.length; i++) {
+  for (var i = 0; i < ancestry.length; i++) {
     person = ancestry[i];
     yearOfDeath = Math.ceil(person.died / 100);
     
@@ -25,7 +25,7 @@ function sortAgesToCentury() {
 }
 
 function logAverageAge() {
-  for(const prop in centuries) {
+  for (const prop in centuries) {
   	console.log(prop.toString() + ': ' + average(centuries[prop]));
   }
 }
