@@ -33,7 +33,7 @@ RangeSeq.prototype.current = function() {
 
 function logFive(sequence) {
   for (var i = 0; i < 5; i++) {
-    if(!sequence.next()) {
+    if (!sequence.next()) {
       break;
     }
     
