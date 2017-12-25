@@ -23,3 +23,5 @@ console.log(new Vector(1, 2).minus(new Vector(2, 3)));
 // → Vector{x: -1, y: -1}
 console.log(new Vector(3, 4).norm);
 // → 5
+
+module.exports = vector;
