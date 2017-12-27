@@ -214,4 +214,5 @@ PlantEater.prototype.act = function(view) {
     return {type: "move", direction: space};
 };
 
-module.exports = worlds;
+if (typeof module !== "undefined" && module.exports)
+  module.exports = World;

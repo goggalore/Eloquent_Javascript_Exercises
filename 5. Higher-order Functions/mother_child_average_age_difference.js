@@ -1,6 +1,6 @@
 // logs the average age difference between child and mother for persons with known mothers in the ancestry file
 
-const ancestry = require(ancestry.js);
+const ancestry = require('./ancestry.js');
 
 function average(array) {
   function plus(a, b) { return a + b; }

@@ -24,18 +24,15 @@ Vector.prototype.distance = function(vector) {
 Vector.min = function(vectors) {
   // accepts either an array of vectors or explicit individual vectors
   var min = 0;
-  if (arguments.length > 1) {
-    for (var i = 0; i < arguments.length; i++) {
-      min = smallerVector(min, arguments[i]);
-    }
 
-    return min;
+  if (vectors.length) { 
+    arguments = vectors;
   }
 
-  for (var j = 0; j < vectors.length; j++) {
-    min = smallerVector(min, vectors[j])
+  for (var i = 0; i < arguments.length; i++) {
+    min = smallerVector(min, arguments[i]);
   }
-  
+
   return min;
 }
 
@@ -60,4 +57,5 @@ console.log(Vector.min([new Vector(2, 2), new Vector(2, 5), new Vector(3, 5)]));
 console.log(Vector.min(new Vector(2, 2), new Vector(2, 5), new Vector(3, 5)))
 // → Vector {x: 2, y: 2}
 
-module.exports = vector;
+if (typeof module != "undefined" && module.exports)
+  module.exports = Vector;

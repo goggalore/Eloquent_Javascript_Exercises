@@ -1,4 +1,14 @@
-const worlds = require('worlds');
+const worlds = require('./World');
+
+Grid.prototype.findAll = function(char) {
+  var found = [];
+  this.forEach(function(critter, vector) {
+    if (critter === char)
+      found.push(vector);
+  }, this)
+  
+  return found;
+}
 
 function SmartPlantEater() {
   PlantEater.call(this);
@@ -16,6 +26,13 @@ SmartPlantEater.prototype.act = function(view) {
   }
   if (space)
     return {type: 'move', direction: space};
+}
+SmartPlantEater.prototype.findFood = function(grid) {
+  var plants = grid.findAll('*');
+  var distances = plants.map(function(plant) {
+    return this.distance(plant);
+  }.bind(this));
+  var closest = Vector.min(distances);
 }
 
 animateWorld(new LifelikeWorld(
