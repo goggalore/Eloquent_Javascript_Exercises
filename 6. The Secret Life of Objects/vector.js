@@ -25,7 +25,7 @@ Vector.min = function(vectors) {
   // accepts either an array of vectors or explicit individual vectors
   var min = 0;
 
-  if (vectors.length) { 
+  if (Array.isArray(vectors)) { 
     arguments = vectors;
   }
 
