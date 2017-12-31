@@ -10,7 +10,17 @@ Object.defineProperty(PriorityQueue.prototype, 'length', {
 
 PriorityQueue.prototype.clear = function() {
     this.data = [];
-}
+};
+
+PriorityQueue.prototype.containsKey = function(key) {
+    for(var i = 0; i < this.data.length; i++) {
+        if (this.data[i][0] === key) {
+            return true;
+        }
+    }
+
+    return false;
+};
 
 PriorityQueue.prototype.isEmpty = function() {
     if (this.length === 0) {
@@ -28,6 +38,11 @@ PriorityQueue.prototype.pop = function() {
     return this.data.pop()[0];
 };
 
+/**
+ * @param {VALUE} element
+ * @param {number} priority
+ */
+
 PriorityQueue.prototype.push = function(element, priority) {
     if (priority === undefined) {
         priority = 0;
@@ -37,11 +52,15 @@ PriorityQueue.prototype.push = function(element, priority) {
     
     return this.data.sort(function(a, b) {
         if (a[1] > b[1]) {
-            return 1;
+            return -1;
         }
 
-        return -1;
+        return 1;
     });
+};
+
+PriorityQueue.prototype.shift = function() {
+    return this.data.shift()[0];
 };
 
 if (typeof module != "undefined" && module.exports)

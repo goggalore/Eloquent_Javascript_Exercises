@@ -21,3 +21,7 @@ console.log(pQueue.pop());
 // → b
 console.log(pQueue);
 // → PriorityQueue { data: [ [ 'c', 0.5 ], [ 'a', 1 ] ] }
+console.log(pQueue.containsKey('a'));
+// → true
+console.log(pQueue.containsKey('j'));
+// → false
