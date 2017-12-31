@@ -11,18 +11,19 @@ Object.defineProperty(Vector.prototype, 'norm', {
 
 Vector.prototype.plus = function(vector) {
   return new Vector(this.x + vector.x, this.y + vector.y);
-}
+};
 
 Vector.prototype.minus = function(vector) {
   return new Vector(this.x - vector.x, this.y - vector.y);
-}
+};
 
 Vector.prototype.distance = function(vector) {
   return Math.sqrt(Math.pow((this.x - vector.x), 2) + Math.pow((this.y - vector.y), 2));
-}
+};
 
 Vector.min = function(vectors) {
   // accepts either an array of vectors or explicit individual vectors
+  // computes which vector has the smallest magnitude
   var min = 0;
 
   if (Array.isArray(vectors)) { 
@@ -34,7 +35,7 @@ Vector.min = function(vectors) {
   }
 
   return min;
-}
+};
 
 function smallerVector(accumulator, vector) {
   if (accumulator.norm && accumulator.norm <= vector.norm) {
@@ -42,7 +43,7 @@ function smallerVector(accumulator, vector) {
   }
 
   return vector;
-} 
+};
 
 console.log(new Vector(1, 2).plus(new Vector(2, 3)));
 // → Vector{x: 3, y: 5}
