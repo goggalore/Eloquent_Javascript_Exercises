@@ -2,7 +2,7 @@
 // given from http://eloquentjavascript.net/07_elife.html
 // as background to the project exercises
 
-const vector = require('../6. The Secret Life of Objects/vector');
+const Vector = require('../6. The Secret Life of Objects/vector');
 
 var directionNames = "n ne e se s sw w nw".split(" ");
 var actionTypes = Object.create(null);
@@ -150,6 +150,10 @@ LifelikeWorld.prototype.letAct = function(critter, vector) {
   }
 };
 
+actionTypes.costs = {
+  'grow': 0.5,
+  'move': 1.0
+};
 actionTypes.grow = function(critter) {
   critter.energy += 0.5;
   return true;
