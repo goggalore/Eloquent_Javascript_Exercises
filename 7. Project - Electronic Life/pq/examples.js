@@ -16,11 +16,11 @@ console.log(pQueue.length);
 console.log(pQueue.peek());
 // → b
 console.log(pQueue);
-// → PriorityQueue { data: [ [ 'c', 0.5 ], [ 'a', 1 ], [ 'b', 2 ] ] }
+// → PriorityQueue { data: [ [ 'b', 2 ], [ 'a', 1 ], [ 'c', 0.5 ] ] }
 console.log(pQueue.pop());
 // → b
 console.log(pQueue);
-// → PriorityQueue { data: [ [ 'c', 0.5 ], [ 'a', 1 ] ] }
+// → PriorityQueue { data: [ [ 'b', 2 ], [ 'a', 1 ] ] }
 console.log(pQueue.containsKey('a'));
 // → true
 console.log(pQueue.containsKey('j'));
