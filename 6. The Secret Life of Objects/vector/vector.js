@@ -21,6 +21,13 @@ Vector.prototype.distance = function(vector) {
   return Math.sqrt(Math.pow((this.x - vector.x), 2) + Math.pow((this.y - vector.y), 2));
 };
 
+Vector.prototype.rotate = function(angle) { 
+  // rotates a vector about (0, 0) in the counter-clockwise (positive) direction
+  angle *= Math.PI/180; 
+  return new Vector((this.x * Math.cos(angle)) - (this.y * Math.sin(angle)), 
+                    (this.x *  Math.sin(angle)) + (this.y * Math.cos(angle)));
+};
+
 Vector.min = function(vectors) {
   // accepts either an array of vectors or explicit individual vectors
   // computes which vector has the smallest magnitude
@@ -44,19 +51,6 @@ function smallerVector(accumulator, vector) {
 
   return vector;
 };
-
-console.log(new Vector(1, 2).plus(new Vector(2, 3)));
-// → Vector{x: 3, y: 5}
-console.log(new Vector(1, 2).minus(new Vector(2, 3)));
-// → Vector{x: -1, y: -1}
-console.log(new Vector(3, 4).norm);
-// → 5
-console.log(new Vector(2, 2).distance(new Vector(6, 5)));
-// → 5
-console.log(Vector.min([new Vector(2, 2), new Vector(2, 5), new Vector(3, 5)]));
-// → Vector {x: 2, y: 2}
-console.log(Vector.min(new Vector(2, 2), new Vector(2, 5), new Vector(3, 5)))
-// → Vector {x: 2, y: 2}
 
 if (typeof module != "undefined" && module.exports)
   module.exports = Vector;
