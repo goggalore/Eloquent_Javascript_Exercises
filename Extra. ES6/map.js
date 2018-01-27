@@ -80,4 +80,4 @@ console.log(kvMap.get('key2'));
 // avoids memory leak in that keys can be garbage collected
 
 // they are useful when mapping keys to information
-// is only valuable if they key has not been garbage collected
+// is only valuable if the key has not been garbage collected
