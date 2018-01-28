@@ -1,7 +1,7 @@
 // Arrow function expression is shorter syntax than a function expression,
-// and does not have its own this
+// and does not have its own this value
 // thus these expressions are best suited for non-method functions
-// and they cannot be used as constructors
+// as they cannot be used as constructors
 
 const evens = [0, 2, 4, 6, 8, 10, 12, 14];
 

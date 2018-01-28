@@ -79,4 +79,9 @@ console.log(Set.union(setA, setB, setC)); // Set { 1, 2, 3, 4, 5, 6 }
 console.log(Set.intersection(setA, setB, setC)); // Set { 3 }
 console.log(Set.difference(setA, setC)); // Set { 1, 2 }
 
-console.log(setA.isSubset(subsetA)); 
+console.log(setA.isSubset(subsetA)); // true
+console.log(setA.isSubset(setB)); // false
+
+// just as the case with maps, weak sets exist as well,
+// and they only hold objects which can be garbage collected,
+// if there is no other reference to the object.
