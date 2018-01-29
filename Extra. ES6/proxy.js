@@ -14,7 +14,7 @@ const logProxies = () => {
     const handler = {
         get: function(object, prop) {
             if (prop === 'id') {
-                throw new Error(`Cannot access the private property id`);
+                console.warn(`Cannot access the private property id`);
             } else {
                 console.log(`The value for property ${prop} has been accessed`);
                 return object[prop]; 
@@ -22,7 +22,7 @@ const logProxies = () => {
         },
         set: function(object, prop, value) {
             if (typeof value !== 'string') {
-                throw new Error('Only string values can be stored int his object');
+                console.warn('Only string values can be stored int his object');
             }
             else {    
                 console.log(`${prop} is being set to ${value}`);
